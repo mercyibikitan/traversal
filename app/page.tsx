@@ -11,6 +11,7 @@ export default function Home() {
 
       <HeroCarousel />
 
+      {/* SEARCH + CALENDAR */}
       <DateSearch />
 
       <section className="destinations-section">
@@ -66,6 +67,42 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* FOOTER */}
+      <footer className="footer">
+        <div className="footer-container">
+          <div className="footer-brand">
+            <h2>Traversal</h2>
+
+            <p>
+              Explore beautiful destinations and create unforgettable
+              travel experiences around the world.
+            </p>
+          </div>
+
+          <nav className="footer-nav">
+            <a href="/">Home</a>
+            <a href="/destinations">Destinations</a>
+            <a href="/#about">About</a>
+            <a href="/#contact">Contact</a>
+            <a href="#">Packages</a>
+            <a href="#">Services</a>
+            <a href="#">Blog</a>
+          </nav>
+
+          <div className="footer-contact">
+            <h3>Contact Us</h3>
+            <p>info@traversal.com</p>
+            <p>+234 800 000 0000</p>
+          </div>
+        </div>
+
+        <div className="footer-bottom">
+          <p>
+            © {new Date().getFullYear()} Traversal.by merbikscodes.
+          </p>
+        </div>
+      </footer>
     </main>
   );
 }
