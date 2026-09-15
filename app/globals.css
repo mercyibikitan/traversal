@@ -18,10 +18,24 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   color: #222;
   background: #fff;
+  overflow-x: hidden;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+img {
+  max-width: 100%;
+  display: block;
 }
 
 a {
   text-decoration: none;
+  color: inherit;
+}
+
+button,
+input,
+textarea {
+  font-family: inherit;
 }
 
 .container {
@@ -29,6 +43,7 @@ a {
   max-width: 1200px;
   margin: 0 auto;
 }
+
 
 /* =========================
    NAVBAR
@@ -42,18 +57,21 @@ a {
   padding: 25px 0;
   background: #fff;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  transition: background 0.3s ease;
 }
 
 .nav-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 20px;
 }
 
 .logo {
   color: #222;
   font-size: 30px;
   font-weight: 700;
+  white-space: nowrap;
 }
 
 .nav-links {
@@ -74,10 +92,16 @@ a {
 }
 
 .book-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   background: #ff6b6b;
-  color: white;
-  padding: 12px 25px;
+  color: #fff;
+  padding: 12px 22px;
   border-radius: 4px;
+  font-size: 14px;
+  font-weight: 600;
+  white-space: nowrap;
   transition: 0.3s;
 }
 
@@ -85,9 +109,45 @@ a {
   background: #e95757;
 }
 
+/* DARK MODE BUTTON */
+
+.dark-mode-btn {
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #ddd;
+  border-radius: 50%;
+  background: #fff;
+  color: #222;
+  font-size: 18px;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: 0.3s ease;
+}
+
+.dark-mode-btn:hover {
+  transform: scale(1.05);
+}
+
+/* MOBILE MENU BUTTON */
+
 .menu-btn {
   display: none;
+  width: 40px;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background: transparent;
+  color: #222;
+  font-size: 25px;
+  line-height: 1;
+  cursor: pointer;
+  padding: 5px;
 }
+
 
 /* =========================
    HOME HERO
@@ -109,7 +169,7 @@ a {
 }
 
 .hero-content {
-  color: white;
+  color: #fff;
   padding-top: 70px;
 }
 
@@ -134,9 +194,11 @@ a {
 }
 
 .primary-btn {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   background: #ff6b6b;
-  color: white;
+  color: #fff;
   padding: 14px 28px;
   border-radius: 4px;
   font-weight: 600;
@@ -147,6 +209,7 @@ a {
   background: #e95757;
   transform: translateY(-2px);
 }
+
 
 /* =========================
    HERO CAROUSEL
@@ -183,7 +246,7 @@ a {
   height: 12px;
   border: none;
   border-radius: 50%;
-  background: white;
+  background: #fff;
   opacity: 0.5;
   cursor: pointer;
   transition: 0.3s;
@@ -193,6 +256,7 @@ a {
   opacity: 1;
   transform: scale(1.2);
 }
+
 
 /* =========================
    DATE SEARCH
@@ -208,10 +272,13 @@ a {
   grid-template-columns: 1.3fr 1fr 1fr auto;
   gap: 15px;
   align-items: end;
+
   background: #fff;
   padding: 30px;
+
   border-radius: 6px;
   box-shadow: 0 5px 30px rgba(0, 0, 0, 0.1);
+
   margin-top: -40px;
   position: relative;
   z-index: 10;
@@ -237,6 +304,8 @@ a {
   padding: 0 14px;
   font-size: 14px;
   outline: none;
+  background: #fff;
+  color: #222;
 }
 
 .search-field input:focus {
@@ -247,7 +316,7 @@ a {
   height: 48px;
   border: none;
   background: #ff6b6b;
-  color: white;
+  color: #fff;
   padding: 0 28px;
   border-radius: 4px;
   font-weight: 600;
@@ -259,12 +328,14 @@ a {
   background: #e95757;
 }
 
+
 /* =========================
    DESTINATIONS SECTION
 ========================= */
 
 .destinations-section {
   padding: 90px 0;
+  background: #fff;
 }
 
 .section-heading {
@@ -288,7 +359,9 @@ a {
 .section-heading span {
   color: #777;
   font-size: 16px;
+  line-height: 1.7;
 }
+
 
 /* =========================
    DESTINATION GRID
@@ -301,7 +374,7 @@ a {
 }
 
 .destination-card {
-  background: white;
+  background: #fff;
   border-radius: 6px;
   overflow: hidden;
   box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
@@ -368,6 +441,7 @@ a {
   margin-top: 45px;
 }
 
+
 /* =========================
    STATS
 ========================= */
@@ -387,11 +461,13 @@ a {
 .stats-grid h3 {
   font-size: 40px;
   margin-bottom: 8px;
+  color: #ff6b6b;
 }
 
 .stats-grid p {
   color: #777;
 }
+
 
 /* =========================
    DESTINATIONS PAGE HERO
@@ -399,10 +475,12 @@ a {
 
 .destination-hero {
   min-height: 60vh;
+
   background:
     linear-gradient(rgba(0, 0, 0, 0.55),
       rgba(0, 0, 0, 0.55)),
     url("https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=2000&q=80");
+
   background-size: cover;
   background-position: center;
 }
@@ -412,12 +490,13 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
-  text-align: center;
 }
 
 .destination-hero-content {
-  color: white;
-  padding-top: 60px;
+  width: 100%;
+  color: #fff;
+  padding: 60px 0;
+  text-align: center;
 }
 
 .destination-hero-content p {
@@ -439,6 +518,7 @@ a {
   line-height: 1.7;
 }
 
+
 /* =========================
    DESTINATION PAGE CONTENT
 ========================= */
@@ -451,6 +531,35 @@ a {
   background: #fff;
 }
 
+
+/* =========================
+   BREADCRUMBS
+========================= */
+
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px;
+  margin-bottom: 35px;
+  font-size: 14px;
+}
+
+.breadcrumbs a {
+  color: #fff;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.breadcrumbs a:hover {
+  color: #ff6b6b;
+}
+
+.breadcrumbs span {
+  color: #fff;
+}
+
+
 /* =========================
    404 PAGE
 ========================= */
@@ -461,10 +570,12 @@ a {
   align-items: center;
   justify-content: center;
   text-align: center;
+
   background:
     linear-gradient(rgba(0, 0, 0, 0.65),
       rgba(0, 0, 0, 0.65)),
     url("https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=2000&q=80");
+
   background-size: cover;
   background-position: center;
   padding: 30px;
@@ -472,7 +583,7 @@ a {
 
 .not-found-content {
   max-width: 650px;
-  color: white;
+  color: #fff;
 }
 
 .not-found-code {
@@ -493,6 +604,7 @@ a {
   margin-bottom: 30px;
 }
 
+
 /* =========================
    FOOTER
 ========================= */
@@ -507,9 +619,11 @@ a {
   width: 90%;
   max-width: 1200px;
   margin: 0 auto;
+
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+
   gap: 50px;
   padding-bottom: 50px;
 }
@@ -537,7 +651,6 @@ a {
 
 .footer-nav a {
   color: #fff;
-  text-decoration: none;
   font-size: 15px;
   transition: 0.3s ease;
 }
@@ -569,6 +682,7 @@ a {
   margin: 0;
 }
 
+
 /* =========================
    CONTACT PAGE
 ========================= */
@@ -582,8 +696,10 @@ a {
   width: 90%;
   max-width: 1200px;
   margin: 0 auto;
+
   display: grid;
   grid-template-columns: 1fr 1fr;
+
   gap: 70px;
   align-items: start;
 }
@@ -630,7 +746,10 @@ a {
   font-size: 15px;
 }
 
-/* Contact Form */
+
+/* =========================
+   CONTACT FORM
+========================= */
 
 .contact-form {
   background: #f8f8f8;
@@ -653,13 +772,17 @@ a {
 .form-group textarea {
   width: 100%;
   padding: 14px 15px;
+
   border: 1px solid #ddd;
   border-radius: 5px;
+
   background: #fff;
+  color: #222;
+
   font-family: inherit;
   font-size: 15px;
+
   outline: none;
-  box-sizing: border-box;
 }
 
 .form-group input:focus,
@@ -677,6 +800,138 @@ a {
   width: auto;
 }
 
+
+/* =========================
+   DARK MODE
+========================= */
+
+.dark body {
+  background: #121212;
+  color: #fff;
+}
+
+.dark .navbar {
+  background: #181818;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+}
+
+.dark .logo {
+  color: #fff;
+}
+
+.dark .nav-links a {
+  color: #fff;
+}
+
+.dark .nav-links a:hover {
+  color: #ff6b6b;
+}
+
+.dark .dark-mode-btn {
+  background: #242424;
+  border-color: #444;
+  color: #fff;
+}
+
+.dark .menu-btn {
+  color: #fff;
+}
+
+.dark .date-search-section {
+  background: #121212;
+}
+
+.dark .date-search {
+  background: #1e1e1e;
+  box-shadow: 0 5px 30px rgba(0, 0, 0, 0.35);
+}
+
+.dark .search-field label {
+  color: #fff;
+}
+
+.dark .search-field input {
+  background: #2a2a2a;
+  color: #fff;
+  border-color: #444;
+}
+
+.dark .search-field input::placeholder {
+  color: #aaa;
+}
+
+.dark .destinations-section {
+  background: #121212;
+}
+
+.dark .section-heading h2 {
+  color: #fff;
+}
+
+.dark .section-heading span {
+  color: #ccc;
+}
+
+.dark .destination-card {
+  background: #1e1e1e;
+}
+
+.dark .destination-content h3 {
+  color: #fff;
+}
+
+.dark .destination-description {
+  color: #ccc;
+}
+
+.dark .learn-more:hover {
+  color: #fff;
+}
+
+.dark .stats-section {
+  background: #181818;
+}
+
+.dark .stats-grid p {
+  color: #ccc;
+}
+
+.dark .contact-section {
+  background: #121212;
+}
+
+.dark .contact-info h2,
+.dark .contact-info>p:not(.contact-subtitle),
+.dark .contact-details h3,
+.dark .contact-details p {
+  color: #fff;
+}
+
+.dark .contact-form {
+  background: #1e1e1e;
+}
+
+.dark .form-group label {
+  color: #fff;
+}
+
+.dark .form-group input,
+.dark .form-group textarea {
+  background: #2a2a2a;
+  color: #fff;
+  border-color: #444;
+}
+
+.dark .form-group input::placeholder,
+.dark .form-group textarea::placeholder {
+  color: #aaa;
+}
+
+.dark .footer {
+  background: #0d0d0d;
+}
+
+
 /* =========================
    MOBILE RESPONSIVE
 ========================= */
@@ -686,57 +941,88 @@ a {
   /* NAVBAR */
 
   .navbar {
-    padding: 18px 0;
+    padding: 16px 0;
   }
 
   .nav-container {
-    gap: 15px;
+    position: relative;
+    gap: 10px;
   }
 
   .logo {
     font-size: 24px;
+    margin-right: auto;
+  }
+
+  .book-btn {
+    padding: 9px 13px;
+    font-size: 11px;
+  }
+
+  .dark-mode-btn {
+    width: 36px;
+    height: 36px;
+    font-size: 16px;
+    margin: 0;
+  }
+
+  .menu-btn {
+    display: inline-flex;
+    flex-shrink: 0;
   }
 
   .nav-links {
     display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    background: #fff;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0;
-    padding: 20px 5%;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
   }
 
   .nav-links.mobile-open {
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 0;
+    right: 0;
+
     display: flex;
+    flex-direction: column;
+    align-items: stretch;
+
+    gap: 0;
+    padding: 10px;
+
+    background: #fff;
+    border-radius: 6px;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
   }
 
-  .nav-links a {
+  .nav-links.mobile-open a {
     width: 100%;
-    padding: 14px 0;
+    padding: 14px 12px;
+
+    color: #222;
     border-bottom: 1px solid #eee;
   }
 
-  .book-btn {
-    padding: 10px 16px;
-    font-size: 13px;
-    white-space: nowrap;
+  .nav-links.mobile-open a:last-child {
+    border-bottom: none;
   }
 
-  .menu-btn {
-    display: block;
-    border: none;
-    background: transparent;
-    font-size: 28px;
-    line-height: 1;
-    cursor: pointer;
-    color: #222;
-    padding: 4px;
+
+  /* DARK MOBILE MENU */
+
+  .dark .nav-links.mobile-open {
+    background: #1e1e1e;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
   }
+
+  .dark .nav-links.mobile-open a {
+    color: #fff;
+    border-bottom-color: #333;
+  }
+
+  .dark .nav-links.mobile-open a:hover {
+    color: #ff6b6b;
+  }
+
 
   /* HERO */
 
@@ -773,11 +1059,13 @@ a {
     font-size: 14px;
   }
 
+
   /* CAROUSEL */
 
   .carousel-dots {
     bottom: 25px;
   }
+
 
   /* DATE SEARCH */
 
@@ -788,6 +1076,7 @@ a {
   .date-search {
     grid-template-columns: 1fr;
     gap: 15px;
+
     margin-top: -20px;
     padding: 20px;
   }
@@ -799,6 +1088,7 @@ a {
   .search-btn {
     width: 100%;
   }
+
 
   /* DESTINATIONS */
 
@@ -833,6 +1123,7 @@ a {
     padding: 22px;
   }
 
+
   /* STATS */
 
   .stats-section {
@@ -848,6 +1139,7 @@ a {
     font-size: 32px;
   }
 
+
   /* DESTINATION / ABOUT HERO */
 
   .destination-hero,
@@ -856,7 +1148,7 @@ a {
   }
 
   .destination-hero-content {
-    padding-top: 30px;
+    padding: 30px 0;
   }
 
   .destination-hero-content h1 {
@@ -868,6 +1160,16 @@ a {
     font-size: 16px;
     line-height: 1.6;
   }
+
+
+  /* BREADCRUMBS */
+
+  .breadcrumbs {
+    justify-content: flex-start;
+    margin-bottom: 25px;
+    font-size: 13px;
+  }
+
 
   /* 404 */
 
@@ -886,6 +1188,7 @@ a {
   .not-found-content p:not(.not-found-code) {
     font-size: 16px;
   }
+
 
   /* CONTACT */
 
@@ -906,6 +1209,7 @@ a {
   .contact-form {
     padding: 25px;
   }
+
 
   /* FOOTER */
 
@@ -940,6 +1244,7 @@ a {
   }
 }
 
+
 /* =========================
    SMALL MOBILE
 ========================= */
@@ -950,28 +1255,40 @@ a {
     width: 92%;
   }
 
+
   /* NAVBAR */
 
   .navbar {
-    padding: 16px 0;
+    padding: 14px 0;
   }
 
   .nav-container {
-    gap: 10px;
+    gap: 7px;
   }
 
   .logo {
-    font-size: 22px;
+    font-size: 21px;
   }
 
   .book-btn {
-    padding: 9px 12px;
-    font-size: 12px;
+    padding: 8px 10px;
+    font-size: 10px;
+  }
+
+  .dark-mode-btn,
+  .menu-btn {
+    width: 34px;
+    height: 34px;
+  }
+
+  .dark-mode-btn {
+    font-size: 15px;
   }
 
   .menu-btn {
-    font-size: 25px;
+    font-size: 22px;
   }
+
 
   /* HERO */
 
@@ -1001,11 +1318,13 @@ a {
     line-height: 1.6;
   }
 
+
   /* DATE SEARCH */
 
   .date-search {
     padding: 18px;
   }
+
 
   /* DESTINATIONS */
 
@@ -1025,6 +1344,7 @@ a {
     font-size: 28px;
   }
 
+
   /* STATS */
 
   .stats-grid {
@@ -1034,6 +1354,7 @@ a {
   .stats-grid h3 {
     font-size: 34px;
   }
+
 
   /* DESTINATION / ABOUT HERO */
 
@@ -1049,6 +1370,16 @@ a {
   .destination-hero-content span {
     font-size: 15px;
   }
+
+
+  /* BREADCRUMBS */
+
+  .breadcrumbs {
+    margin-bottom: 20px;
+    gap: 7px;
+    font-size: 12px;
+  }
+
 
   /* CONTACT */
 
@@ -1069,6 +1400,7 @@ a {
     font-size: 14px;
   }
 
+
   /* FOOTER */
 
   .footer-container {
@@ -1083,170 +1415,4 @@ a {
     font-size: 12px;
     padding: 0 15px;
   }
-}
-
-/* =========================
-   BREADCRUMBS
-========================= */
-
-.breadcrumbs {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  margin-top: 20px;
-  font-size: 14px;
-}
-
-.breadcrumbs a {
-  color: #fff;
-  transition: 0.3s;
-}
-
-.breadcrumbs a:hover {
-  color: #ff6b6b;
-}
-
-.breadcrumbs span {
-  color: rgba(255, 255, 255, 0.7);
-}
-
-.breadcrumbs .current {
-  color: #fff;
-}
-
-/* MOBILE BREADCRUMBS */
-
-@media (max-width: 480px) {
-  .breadcrumbs {
-    margin-top: 15px;
-    gap: 8px;
-    font-size: 13px;
-  }
-}
-
-/* =========================
-   BREADCRUMBS
-========================= */
-
-.breadcrumbs {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  margin-bottom: 35px;
-  font-size: 14px;
-}
-
-.breadcrumbs a {
-  color: #ffffff;
-  text-decoration: none;
-}
-
-.breadcrumbs span {
-  color: #ffffff;
-}
-
-.breadcrumbs a:hover {
-  color: #ff6b6b;
-}
-
-@media (max-width: 768px) {
-  .breadcrumbs {
-    margin-bottom: 25px;
-    font-size: 13px;
-  }
-}
-
-/* =========================
-   DARK MODE
-========================= */
-
-.dark body {
-  background: #121212;
-  color: #ffffff;
-}
-
-.dark .navbar {
-  background: #181818;
-}
-
-.dark .nav-links a {
-  color: #ffffff;
-}
-
-.dark .destinations-section {
-  background: #121212;
-}
-
-.dark .section-heading h2 {
-  color: #ffffff;
-}
-
-.dark .section-heading span {
-  color: #cccccc;
-}
-
-.dark .destination-card {
-  background: #1e1e1e;
-}
-
-.dark .destination-card h3 {
-  color: #ffffff;
-}
-
-.dark .destination-description {
-  color: #cccccc;
-}
-
-.dark .stats-section {
-  background: #181818;
-}
-
-.dark .contact-section {
-  background: #121212;
-}
-
-.dark .contact-info h2,
-.dark .contact-info p,
-.dark .contact-details h3,
-.dark .contact-details p {
-  color: #ffffff;
-}
-
-.dark .contact-form {
-  background: #1e1e1e;
-}
-
-.dark .contact-form input,
-.dark .contact-form textarea {
-  background: #2a2a2a;
-  color: #ffffff;
-  border-color: #444444;
-}
-
-.dark .contact-form input::placeholder,
-.dark .contact-form textarea::placeholder {
-  color: #aaaaaa;
-}
-
-.dark .footer {
-  background: #0d0d0d;
-}
-
-/* =========================
-   DARK MODE BUTTON
-========================= */
-
-.dark-mode-btn {
-  border: none;
-  background: transparent;
-  font-size: 20px;
-  cursor: pointer;
-  padding: 8px;
-  margin-left: 10px;
-  transition: 0.3s ease;
-}
-
-.dark-mode-btn:hover {
-  transform: scale(1.1);
 }
