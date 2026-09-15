@@ -1,5 +1,7 @@
 import Navbar from "@/components/Navbar";
+
 import DestinationCard from "@/components/DestinationCard";
+import Breadcrumbs from "@/components/Breadcrumbs";
 import { destinations } from "@/data/destinations";
 
 export default function Destinations() {
@@ -18,6 +20,7 @@ export default function Destinations() {
                             Discover beautiful places and unforgettable experiences
                             around the world.
                         </span>
+                        <Breadcrumbs currentPage="destinations" />
                     </div>
                 </div>
             </section>

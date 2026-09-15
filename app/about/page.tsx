@@ -1,95 +1,99 @@
 import Navbar from "@/components/Navbar";
+import Breadcrumbs from "@/components/Breadcrumbs";
 
 export default function About() {
-  return (
-    <main>
-      <Navbar />
+    return (
+        <main>
+            <Navbar />
 
-      <section className="destination-hero">
-        <div className="destination-hero-overlay">
-          <div className="container destination-hero-content">
-            <p>ABOUT US</p>
+            <section className="destination-hero">
+                <div className="destination-hero-overlay">
+                    <div className="container destination-hero-content">
+                        <p>ABOUT US</p>
 
-            <h1>About Traversal</h1>
+                        <h1>About Traversal</h1>
 
-            <span>
-              Discover our passion for travel and creating
-              unforgettable experiences around the world.
-            </span>
-          </div>
-        </div>
-      </section>
+                        <span>
+                            Discover our passion for travel and creating
+                            unforgettable experiences around the world.
+                        </span>
 
-      <section className="destinations-section">
-        <div className="container">
-          <div className="section-heading">
-            <p>WHO WE ARE</p>
+                        <Breadcrumbs currentPage="About" />
+                    </div>
+                </div>
+            </section>
 
-            <h2>Travel. Explore. Discover.</h2>
+            <section className="destinations-section">
+                <div className="container">
+                    <div className="section-heading">
+                        <p>WHO WE ARE</p>
 
-            <span>
-              At Traversal, we believe every journey should be
-              memorable.
-            </span>
-          </div>
+                        <h2>Travel. Explore. Discover.</h2>
 
-          <div className="container">
-            <p>
-              We help travelers discover beautiful destinations,
-              explore new cultures, and create unforgettable
-              experiences around the world.
-            </p>
+                        <span>
+                            At Traversal, we believe every journey should be
+                            memorable.
+                        </span>
+                    </div>
 
-            <p>
-              Whether you are planning a relaxing getaway or an
-              exciting adventure, Traversal is here to help you make
-              the most of your journey.
-            </p>
+                    <div className="container">
+                        <p>
+                            We help travelers discover beautiful destinations,
+                            explore new cultures, and create unforgettable
+                            experiences around the world.
+                        </p>
 
-            <div className="center-button">
-              <a href="/destinations" className="primary-btn">
-                Explore Destinations
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
+                        <p>
+                            Whether you are planning a relaxing getaway or an
+                            exciting adventure, Traversal is here to help you make
+                            the most of your journey.
+                        </p>
 
-      <footer className="footer">
-        <div className="footer-container">
-          <div className="footer-brand">
-            <h2>Traversal</h2>
+                        <div className="center-button">
+                            <a href="/destinations" className="primary-btn">
+                                Explore Destinations
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-            <p>
-              Explore beautiful destinations and create unforgettable
-              travel experiences around the world.
-            </p>
-          </div>
+            <footer className="footer">
+                <div className="footer-container">
+                    <div className="footer-brand">
+                        <h2>Traversal</h2>
 
-          <nav className="footer-nav">
-            <a href="/">Home</a>
-            <a href="/destinations">Destinations</a>
-            <a href="/about">About</a>
-            <a href="/contact">Contact</a>
-            <a href="#">Packages</a>
-            <a href="#">Services</a>
-            <a href="#">Blog</a>
-          </nav>
+                        <p>
+                            Explore beautiful destinations and create unforgettable
+                            travel experiences around the world.
+                        </p>
+                    </div>
 
-          <div className="footer-contact">
-            <h3>Contact Us</h3>
+                    <nav className="footer-nav">
+                        <a href="/">Home</a>
+                        <a href="/destinations">Destinations</a>
+                        <a href="/about">About</a>
+                        <a href="/contact">Contact</a>
+                        <a href="#">Packages</a>
+                        <a href="#">Services</a>
+                        <a href="#">Blog</a>
+                    </nav>
 
-            <p>info@traversal.com</p>
-            <p>+234 800 000 0000</p>
-          </div>
-        </div>
+                    <div className="footer-contact">
+                        <h3>Contact Us</h3>
 
-        <div className="footer-bottom">
-          <p>
-            © {new Date().getFullYear()} Traversal.by merbikscodes.
-          </p>
-        </div>
-      </footer>
-    </main>
-  );
+                        <p>info@traversal.com</p>
+
+                        <p>+234 800 000 0000</p>
+                    </div>
+                </div>
+
+                <div className="footer-bottom">
+                    <p>
+                        © {new Date().getFullYear()} Traversal.by merbikscodes.
+                    </p>
+                </div>
+            </footer>
+        </main>
+    );
 }
