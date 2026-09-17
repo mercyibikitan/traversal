@@ -19,7 +19,7 @@ export default function Contact() {
               We would love to hear from you.
             </span>
 
-            <Breadcrumbs currentPage="Contact" />
+            <Breadcrumbs currentPage="" />
           </div>
         </div>
       </section>

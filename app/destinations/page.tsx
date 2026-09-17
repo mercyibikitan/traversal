@@ -1,5 +1,4 @@
 import Navbar from "@/components/Navbar";
-
 import DestinationCard from "@/components/DestinationCard";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import { destinations } from "@/data/destinations";
@@ -12,6 +11,8 @@ export default function Destinations() {
             <section className="destination-hero">
                 <div className="destination-hero-overlay">
                     <div className="container destination-hero-content">
+                        <Breadcrumbs currentPage="" />
+
                         <p>EXPLORE WITH US</p>
 
                         <h1>Our Destinations</h1>
@@ -20,7 +21,6 @@ export default function Destinations() {
                             Discover beautiful places and unforgettable experiences
                             around the world.
                         </span>
-                        <Breadcrumbs currentPage="destinations" />
                     </div>
                 </div>
             </section>
@@ -48,7 +48,6 @@ export default function Destinations() {
                 </div>
             </section>
 
-            {/* FOOTER */}
             <footer className="footer">
                 <div className="footer-container">
                     <div className="footer-brand">
@@ -63,18 +62,14 @@ export default function Destinations() {
                     <nav className="footer-nav">
                         <a href="/">Home</a>
                         <a href="/destinations">Destinations</a>
-                        <a href="/#about">About</a>
-                        <a href="/#contact">Contact</a>
-                        <a href="#">Packages</a>
-                        <a href="#">Services</a>
-                        <a href="#">Blog</a>
+                        <a href="/about">About</a>
+                        <a href="/contact">Contact</a>
                     </nav>
 
                     <div className="footer-contact">
                         <h3>Contact Us</h3>
 
                         <p>info@traversal.com</p>
-
                         <p>+234 800 000 0000</p>
                     </div>
                 </div>

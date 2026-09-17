@@ -18,7 +18,7 @@ export default function About() {
                             unforgettable experiences around the world.
                         </span>
 
-                        <Breadcrumbs currentPage="About" />
+                        <Breadcrumbs currentPage="" />
                     </div>
                 </div>
             </section>

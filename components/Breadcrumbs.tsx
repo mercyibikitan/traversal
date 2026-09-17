@@ -1,17 +1,21 @@
 import Link from "next/link";
 
 type BreadcrumbsProps = {
-  currentPage: string;
+    currentPage: string;
 };
 
 export default function Breadcrumbs({
-  currentPage,
+    currentPage,
 }: BreadcrumbsProps) {
-  return (
-    <div className="breadcrumbs">
-      <Link href="/">Home</Link>
-      <span>»</span>
-      <span>{currentPage}</span>
-    </div>
-  );
+    return (
+        <div className="breadcrumbs">
+            <h1>{currentPage}</h1>
+
+            <div className="breadcrumb-links">
+                <Link href="/">Home</Link>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    );
 }
