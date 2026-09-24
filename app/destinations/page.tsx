@@ -1,6 +1,6 @@
 import Navbar from "@/components/Navbar";
 import DestinationCard from "@/components/DestinationCard";
-import Breadcrumbs from "@/components/Breadcrumbs";
+
 import { destinations } from "@/data/destinations";
 
 export default function Destinations() {
@@ -11,7 +11,7 @@ export default function Destinations() {
             <section className="destination-hero">
                 <div className="destination-hero-overlay">
                     <div className="container destination-hero-content">
-                        <Breadcrumbs currentPage="" />
+                       
 
                         <p>EXPLORE WITH US</p>
 

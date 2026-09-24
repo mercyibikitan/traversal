@@ -1,5 +1,5 @@
 import Navbar from "@/components/Navbar";
-import Breadcrumbs from "@/components/Breadcrumbs";
+
 
 export default function About() {
     return (
@@ -18,7 +18,7 @@ export default function About() {
                             unforgettable experiences around the world.
                         </span>
 
-                        <Breadcrumbs currentPage="" />
+                       
                     </div>
                 </div>
             </section>

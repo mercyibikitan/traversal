@@ -1,5 +1,5 @@
 import Navbar from "@/components/Navbar";
-import Breadcrumbs from "@/components/Breadcrumbs";
+
 
 export default function Contact() {
   return (
@@ -19,7 +19,7 @@ export default function Contact() {
               We would love to hear from you.
             </span>
 
-            <Breadcrumbs currentPage="" />
+          
           </div>
         </div>
       </section>
